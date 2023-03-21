@@ -7,6 +7,7 @@ const ourField = document.querySelector(".our-field")
 const pointsNeeded = document.querySelector(".points-needed")
 const mistakesAllowed = document.querySelector(".mistakes-allowed")
 const progressBar = document.querySelector(".progress-inner")
+const endMessage = document.querySelector(".end-message")
 let state = {
   score: 0,
   wrongAnswers: 0
@@ -59,19 +60,14 @@ function handleSubmit(e) {
 function checkLogic() {
   // if you won
   if (state.score === 10) {
-    // the timeout helps in maintaining expected execution..
-    // ..without the timeout the alert pops up before rendering the progressbar
-    // ..and the game resets before clicking on 'OK button' in the alert pop-up
-    setTimeout(() => {
-      alert("Congrats, you won.")
-      resetGame()
-    }, 200)
+    endMessage.textContent = "Congrats you Won!"
+    document.body.classList.add("overlay-is-open")
   }
 
   // if you lost
   if (state.wrongAnswers === 3) {
-    alert("Sorry, you lost.")
-    resetGame()
+    endMessage.textContent = "Sorry, you lost."
+    document.body.classList.add("overlay-is-open")
   }
 }
 
