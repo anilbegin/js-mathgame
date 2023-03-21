@@ -11,4 +11,14 @@
 .progress {
   border: 1px solid #c7c7c7;
   border-right: none;
+  position: relative;
+}
+
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: 0.57;
 }
