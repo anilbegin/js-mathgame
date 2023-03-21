@@ -36,4 +36,18 @@
   display: flex;
   justify-content: center; /*horizontal align*/
   align-items: center; /*vertical align*/
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.3s ease-out;
+}
+
+body.overlay-is-open .overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+body.overlay-is-open .main-ui {
+  filter: blur(4px);
 }
