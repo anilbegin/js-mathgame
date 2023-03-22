@@ -8,6 +8,8 @@ const pointsNeeded = document.querySelector(".points-needed")
 const mistakesAllowed = document.querySelector(".mistakes-allowed")
 const progressBar = document.querySelector(".progress-inner")
 const endMessage = document.querySelector(".end-message")
+const resetButton = document.querySelector(".reset-game")
+
 let state = {
   score: 0,
   wrongAnswers: 0
@@ -71,6 +73,8 @@ function checkLogic() {
   }
 }
 
+resetButton.addEventListener("click", resetGame) /* reset game button on the overlay */
+
 function resetGame() {
   updateProblem()
   state.score = 0
@@ -78,6 +82,7 @@ function resetGame() {
   pointsNeeded.textContent = 10
   mistakesAllowed.textContent = 2
   renderProgressBar()
+  document.body.classList.remove("overlay-is-open")
 }
 
 function renderProgressBar() {
