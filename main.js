@@ -64,12 +64,14 @@ function checkLogic() {
   if (state.score === 10) {
     endMessage.textContent = "Congrats you Won!"
     document.body.classList.add("overlay-is-open")
+    setTimeout(() => resetButton.focus(), 300)
   }
 
   // if you lost
   if (state.wrongAnswers === 3) {
     endMessage.textContent = "Sorry, you lost."
     document.body.classList.add("overlay-is-open")
+    setTimeout(() => resetButton.focus(), 300)
   }
 }
 
