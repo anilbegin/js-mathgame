@@ -74,3 +74,23 @@ body.overlay-is-open .overlay {
 body.overlay-is-open .main-ui {
   filter: blur(4px);
 }
+
+.end-message {
+  font-size: 2.02rem;
+}
+.reset-game {
+  background-color: rgb(29, 29, 151);
+  border-radius: 6px;
+  padding: 10px;
+  color: aliceblue;
+  font-size: 1.09rem;
+}
+
+.reset-game:hover {
+  cursor: pointer;
+  background-color: rgb(23, 23, 187);
+}
+
+.overlay-inner {
+  text-align: center;
+}
