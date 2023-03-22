@@ -55,6 +55,8 @@ function handleSubmit(e) {
   } else {
     state.wrongAnswers++
     mistakesAllowed.textContent = 2 - state.wrongAnswers
+    problemElement.classList.add("on-error")
+    setTimeout(() => problemElement.classList.remove("on-error"), 450)
   }
   checkLogic()
 }
