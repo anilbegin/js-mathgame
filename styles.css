@@ -8,6 +8,18 @@
   width: 20px;
 }
 
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.problem {
+  margin: 0;
+  font-size: 5rem;
+  padding: 10px;
+}
+
 .progress {
   border: 1px solid #c7c7c7;
   border-right: none;
