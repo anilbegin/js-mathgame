@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <div class="main-ui">
@@ -31,7 +32,20 @@
         </div>
         <div class="progress-inner"></div>
       </div>
+      <!-- theme changer section -->
+      <div class="theme-changer-section">
+        <input type="checkbox" class='checkbox' id='checkbox'>
+        <label for="checkbox" class='label'>
+          <i class='fas fa-moon'></i>
+          <i class='fas fa-sun'></i>
+          <div class="ball"></div>
+        </label>
+        <p class="theme-name"></p>
+      </div>
+      
+      <!-- end of theme changer section -->
     </div>
+    
     <div class="overlay">
       <div class="overlay-inner">
         <p class="end-message"></p>

@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #fff;
+  transition: background-color .3s linear;
+}
+
 .boxes {
   display: flex;
 }
@@ -55,7 +63,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.81);
+  background-color: rgba(255, 255, 255, 0.91);
   display: flex;
   justify-content: center; /*horizontal align*/
   align-items: center; /*vertical align*/
@@ -94,3 +102,82 @@ body.overlay-is-open .main-ui {
 .overlay-inner {
   text-align: center;
 }
+
+/* theme changer section */
+.theme-changer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+  margin: 0;
+}
+
+.label {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+  padding: 5px;
+  position: relative;  
+  transform: scale(1.2)
+}
+.fa-moon {
+  color: #f1c40f;
+  
+}
+.fa-sun {
+  color: #f39c12;
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  left: 5%;
+}
+
+.checkbox {
+ position: absolute;
+  opacity : 0;
+}
+
+.checkbox:checked + .label .ball {
+ /*  background-color: purple; */
+   transform: translateX(24px);
+ }
+ 
+ body.dark {
+   background-color: #292c35;
+   transition: background-color .3s linear;
+ }
+ body.dark p {
+   color: white;
+ }
+ body.dark .progress-inner {
+  background-color: #5DADE2;
+ }
+
+body.dark .progress {
+  border-color: #1ABC9C;
+}
+body.dark .problem {
+  color: #EAEDED;
+}
+body.dark .overlay {
+  background-color: rgba(55, 49, 49, 0.91);
+}
+/* title below the button-toggle, changes when theme changes */
+body.dark .theme-name::after {
+  content: 'Dark theme'
+}
+body .theme-name::after {
+  content: 'Light theme'
+}
+

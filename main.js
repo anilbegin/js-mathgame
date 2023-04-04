@@ -9,6 +9,7 @@ const mistakesAllowed = document.querySelector(".mistakes-allowed")
 const progressBar = document.querySelector(".progress-inner")
 const endMessage = document.querySelector(".end-message")
 const resetButton = document.querySelector(".reset-game")
+const checkbox = document.getElementById('checkbox')
 
 let state = {
   score: 0,
@@ -92,3 +93,10 @@ function resetGame() {
 function renderProgressBar() {
   progressBar.style.transform = `scaleX(${state.score / 10})`
 }
+
+
+checkbox.addEventListener('change', () => {
+  // change the theme of the website
+  document.body.classList.toggle('dark')
+  ourField.focus()
+})
