@@ -1,0 +1,2 @@
+<img src="./images/light-theme-js-mathgame.jpg" width="1091" height="632" alt="JS Mathgame homepage Light theme" >
+<img src="./images/dark-theme-js-mathgame.jpg" width="1091" height="632" alt="JS Mathgame homepage Dark theme" >
